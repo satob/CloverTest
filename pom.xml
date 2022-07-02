@@ -14,7 +14,7 @@
 	<name>CloverTest</name>
 	<description>Test project for OpenClover</description>
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -35,7 +35,20 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-		</plugins>
+            <plugin>
+                <groupId>org.openclover</groupId>
+                <artifactId>clover-maven-plugin</artifactId>
+                <version>4.2.0</version>
+            </plugin>
+   		</plugins>
 	</build>
 
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.openclover</groupId>
+                <artifactId>clover-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </reporting>
 </project>
